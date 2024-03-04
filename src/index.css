@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.TopHeader {
+  background: #000000;
+}
+
+.TopLogo {
+  cursor: pointer;
+  margin: .5em;
+  padding: .4em;
+  height: 4em;
+}
+
+.TopFav {
+  cursor: pointer;
+  float: right;
+  padding: 1.8em 2em;
+  user-select: none;
+}
+
+.SearchBand {
+  padding: 1em 0 .3em 0;
+  border-bottom: 1px solid #000;
+}
+
+.FavCount {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: top;
+  padding-left: 6px;
+  font-size: 1.2em;
+}
+
+.SearchInput {
+  border: 0;
+  margin-left: 4px;
+  font-size: 1.2em;
+  width: 90%;
+}
+
+.SearchInput:focus-visible {
+  outline: 0;
+}
+
+.SearchResults {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  font-size: .9em;
+}
+
+.cards {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.CardsCard {
+  width: 98%;
+  padding-left: .5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 48%;
+  height: 16em;
+  margin: 1%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path:
+    polygon(
+      0% 0%,     /* top left */
+      100% 0%,   /* top right */
+      100% 92%,  /* bottom right */
+      90% 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%     /* bottom left */
+    );
+}
+
+.CardsInfo {
+  position: absolute;
+  top: 12em;
+  width: 100%;
+  height: .3em;
+  background: #ED1D24;
+  transition: all .3s ease-out;
+}
+
+.card:hover .CardsInfo {
+  height: 4em;
+}
+.card:hover .CardsFav {
+  filter: brightness(1000%);
+}
+
+.CardsSel {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 10em;
+}
+
+.CardsBottom {
+  position: absolute;
+  top: 12.3em;
+  width: 100%;
+  height: 4em;
+  background: #000000;
+}
+
+.CardsText {
+  position: absolute;
+  top: 13.5em;
+  left: 1em;
+  width: 82%;
+  color: #FFFFFF;
+}
+.CardsText div, .DetailText div {
+  float: right;
+  padding-top: 2px;
+  right: 0;
+}
+
+.CardsFav {
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.Detail {
+  background: #000;
+  clip-path:
+    polygon(
+      0% 0%,     /* top left */
+      100% 0%,   /* top right */
+      100% 95%,  /* bottom right */
+      95% 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%     /* bottom left */
+    );
+}
+
+.DetailImg {
+  height: 20em;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.DetailInfo {
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.DetailText {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.DetailComics {
+  padding: 0 12px;
+}
+
+.Comics {
+  width: 86%;
+  padding-left: 7%;
+  margin: auto 0;
+}
+
+.Comics h2 {
+  margin-left: 2%;
+}
+
+.ComicsDetail {
+  display: inline-block;
+  width: 42%;
+  margin: 4%;
+  vertical-align: top;
+}
+
+.ComicsDetail img {
+  max-width: 100%;
+  padding-bottom: .5em;
+}
+
+.ComicsYear {
+  padding: .6em 0;
+  font-size: .8em;
+}
+
+@media (min-width: 720px) {
+  .card {
+    width: 23%;
+    margin: 1%;
+  }
+  .TopLogo {
+    margin: .5em 2em;
+  }
+
+  .Detail {
+    text-align: center;
+    clip-path:
+      polygon(
+	0% 0%,     /* top left */
+	100% 0%,   /* top right */
+	100% 95%,  /* bottom right */
+	98% 100%,  /* bottom right */
+	0% 100%,   /* bottom left */
+	0 100%     /* bottom left */
+      );
+  }
+
+  .DetailImg {
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .DetailInfo {
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .DetailText {
+    font-size: 2em;
+  }
+
+  .ComicsDetail {
+    width: 16%;
+    margin: 2%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 13%;
+    margin: .64%;
+  }
+}
